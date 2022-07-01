@@ -1,8 +1,8 @@
-# :shirt: Shirt Color Advisor Bot :shirt
+# :shirt: Shirt Color Advisor Bot :shirt:
 
 This project is to built a simple bot in `Line` Messaging Platform. It will give an advice which color of your shirt is good for you on that day, in the morning (7:00 AM) everyday.
 
-## :running: How to deploy :running
+## :running: How to deploy :running:
 
 This bot is running in `Google Cloud Function` on my personal account. This function is just to broadcast a today's picture in `resources` directory to all users, which consists of 2 files
 
