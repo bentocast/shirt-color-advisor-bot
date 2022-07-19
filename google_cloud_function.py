@@ -6,6 +6,7 @@ from linebot import (
 from linebot.models import (
     ImageSendMessage
 )
+import pytz
 
 channel_secret = os.getenv('LINE_CHANNEL_SECRET', None)
 channel_access_token = os.getenv('LINE_CHANNEL_ACCESS_TOKEN', None)
@@ -20,6 +21,8 @@ shirt_color = {
     5: 'https://github.com/bentocast/shirt-color-advisor-bot/blob/main/resources/Cloth_Saturday.jpg?raw=true',
     6: 'https://github.com/bentocast/shirt-color-advisor-bot/blob/main/resources/Cloth_Sunday.jpg?raw=true',
 }
+BKK = pytz.timezone('Asia/Bangkok')
+
 def callback(request):
     """Responds to any HTTP request.
     Args:
@@ -30,7 +33,7 @@ def callback(request):
         `make_response <http://flask.pocoo.org/docs/1.0/api/#flask.Flask.make_response>`.
     """
 
-    weekday = datetime.now().weekday()
+    weekday = datetime.now().astimezone(BKK).weekday()
     image_message = ImageSendMessage(
         original_content_url=shirt_color[weekday],
         preview_image_url=shirt_color[weekday]
