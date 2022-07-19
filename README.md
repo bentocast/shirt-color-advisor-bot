@@ -1,6 +1,6 @@
 # :shirt: Shirt Color Advisor Bot :shirt:
 
-This project is to built a simple bot in `Line` Messaging Platform. It will give an advice which color of your shirt is good to wear on that day, in every morning at 7:00 AM.
+This project is to build a simple broadcast bot in `Line` messaging platform. What this bot does is giving an advice which color of your shirt is good to wear on that day, at 6:00 AM every morning.
 
 ![example](example.gif)
 ## :running: How to deploy :running:
@@ -12,4 +12,4 @@ This bot is running in `Google Cloud Function` on my personal account. This func
 
 
 
-Once this function is deployed and ready to use. I set up the `Google Cloud Scheduler` to trigger this function at the specific time everyday.
+Once this function is deployed and ready to use. I set up the `Google Cloud Scheduler` to trigger this function at the 6:00 AM everyday.
